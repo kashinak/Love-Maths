@@ -75,6 +75,8 @@ function calculateRightAnswer() {
         return [operand1 + operand2, "addition"]; // return an array containing the correct answer and game type
     } else if (operator === "x") {
         return [operand1 * operand2, "multiply"];
+    } else if (operator === "-") {
+        return [operand1 - operand2, "subtract"];
     }
     else {
         alert(`Unimplemented operator: ${operator}`);
