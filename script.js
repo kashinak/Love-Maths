@@ -40,6 +40,8 @@ function runGame(gameType) {
     // Creates two numbers with a value of between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
+    let divideNum1 = num1 * num2;
+    let divideNum2 = num2;
 
     // Selects and displays the question depending on the gameType
     // which we set when we called the function
@@ -51,7 +53,7 @@ function runGame(gameType) {
     } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
     } else if (gameType === "division") {
-        displayDivideQuestion(num1, num2);
+        displayDivideQuestion(divideNum1, divideNum2);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type ${gameType}, aborting`;
