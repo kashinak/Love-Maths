@@ -25,8 +25,10 @@ function runGame(gameType) {
     // Generate two random numbers between 1 and 25
     // Math.floor rounds down to the whole number
     // Math.random generates random numbers
-
+    // clearing out the answer-box so that it is empty after an answer is called
     document.getElementById("answer-box").value = "";
+    // setting the focus placing cursur in box after answer is called
+    document.getElementById("answer-box").focus();
 
     // Creates two numbers with a value of between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
