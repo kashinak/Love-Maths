@@ -40,8 +40,9 @@ function runGame(gameType) {
     // Creates two numbers with a value of between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
-    let divideNum1 = num1 * num2;
-    let divideNum2 = num2;
+    
+    let divideNum1 = num1 % 2 == 0;
+    let divideNum2 = num2 % 2 == 0;
 
     // Selects and displays the question depending on the gameType
     // which we set when we called the function
