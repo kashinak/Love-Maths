@@ -14,8 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    // add key method to make website keybaord controlled
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
+
     runGame("addition");
-});
+})
 
 // The main game "loop", called when the script is first loaded
 // and after the user's answer has been processed
